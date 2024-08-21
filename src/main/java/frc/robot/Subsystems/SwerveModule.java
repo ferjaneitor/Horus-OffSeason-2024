@@ -63,14 +63,14 @@ public class SwerveModule {
         //Convertimos la posicion y volcidad de los disitntos encoders relativos para despues poder conseguirlos
         driveEncoder.setPositionConversionFactor(ModuleConstants.kDriveEncoderRot2Meter);
         driveEncoder.setVelocityConversionFactor(ModuleConstants.kDriveEncoderRPM2MeterPerSec);
-        steerEncoder.setPositionConversionFactor(ModuleConstants.kTurningEncoderRot2Deg);
-        steerEncoder.setVelocityConversionFactor(ModuleConstants.kTurningEncoderRPM2RadPerSec);
+        steerEncoder.setPositionConversionFactor(ModuleConstants.kSteeringEncoderRot2Deg);
+        steerEncoder.setVelocityConversionFactor(ModuleConstants.kSteeringEncoderRPM2RadPerSec);
 
         //Creamos nuestro control PID
         steeringPidController = new PIDController(
-            ModuleConstants.kPTurning,
-            ModuleConstants.kITurning,
-            ModuleConstants.KDTurning
+            ModuleConstants.kPSteering,
+            ModuleConstants.kISteering,
+            ModuleConstants.KDSteering
         );
         //Hacemos que pueda aceptar entradas conitnuas para que este se modifique dependiendo de lo que reciba
         steeringPidController.enableContinuousInput(-360, 360);

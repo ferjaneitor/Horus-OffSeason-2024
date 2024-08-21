@@ -25,16 +25,16 @@ public class constants {
 
         //Configuraciones para los encoders, se pasan de rotaciones a metros para el drive motor y de rotaciones a grados para el steering motor
         public static final double kDriveEncoderRot2Meter = kDriveMotorGearRatio * Math.PI * kWheelDiameterMeters;
-        public static final double kTurningEncoderRot2Deg = kTurningMotorGearRatio * 360;
+        public static final double kSteeringEncoderRot2Deg = kTurningMotorGearRatio * 360;
 
         // Configuraciones para sacar las revoluciones por metros y su aceleracion
         public static final double kDriveEncoderRPM2MeterPerSec = kDriveEncoderRot2Meter / 60;
-        public static final double kTurningEncoderRPM2RadPerSec = kTurningEncoderRot2Deg / 60;
+        public static final double kSteeringEncoderRPM2RadPerSec = kSteeringEncoderRot2Deg / 60;
 
         // Configuracion del PID
-        public static final double kPTurning = 0.5;
-        public static final double kITurning = 0;
-        public static final double KDTurning = 0;
+        public static final double kPSteering = 0.5;
+        public static final double kISteering = 0;
+        public static final double KDSteering = 0;
         
     }
 
@@ -172,5 +172,24 @@ public class constants {
         public static final int kDriverFieldOrientedButtonIdx = 6; //Boton para orientacion de campo
 
         public static final double kDeadband = 0.25;//Es la tolerancia para evitar stick drifting
+    }
+
+    //Constantes de la LimeLight
+    public static final class LimeConstants {
+
+        public static final double cameraHeight = 20; 
+        public static final double cameraAngle = 20.5;
+
+        //La distancia del Speaker que debe que estar el robot
+        public static final double kDistanceToSpeaker = 70;
+
+        //La distnacia del robot al Amplificador
+        public static final double kDistanceToAmp = 45;
+
+        //La altura de la April Tag del Speaker
+        public static final double kTargetSpeakertHeight = 54; 
+
+        //La latura de la April Tag del Amp
+        public static final double kTargetAmpHeight = 51.625; // Modiffy 58.375      
     }
 }
