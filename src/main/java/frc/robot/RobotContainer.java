@@ -7,9 +7,16 @@ package frc.robot;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.Commands;
+import frc.robot.Commands.SwerveJoyStickcmd;
 import frc.robot.Subsystems.LimeLightSubsystem;
 import frc.robot.Subsystems.SwerveSubsystem;
 import frc.robot.constants.OIConstants;
+
+/*
+ * @Author: Juan Felipe Zepeda del Toro
+ * @Author: Fernando Joel Cruz Briones
+ * Version 1.0
+ */
 
 public class RobotContainer {
 
@@ -20,6 +27,15 @@ public class RobotContainer {
   private final Joystick AddOnsJoystick = new Joystick(OIConstants.kAddOnsControllerPort);
 
   public RobotContainer() {
+
+    swerveSubsystem.setDefaultCommand(new SwerveJoyStickcmd(
+      swerveSubsystem, 
+      () -> driverJoystick.getRawAxis(OIConstants.kDriverXAxis), 
+      () -> driverJoystick.getRawAxis(OIConstants.kDriverYAxis), 
+      () -> driverJoystick.getRawAxis(OIConstants.kDriverZAxis), 
+      () -> driverJoystick.getRawButton(OIConstants.kDriverFieldOrientedButtonIdx)
+    ));
+
     configureBindings();
   }
 
@@ -28,4 +44,9 @@ public class RobotContainer {
   public Command getAutonomousCommand() {
     return Commands.print("No autonomous command configured");
   }
+
+  public void mResetEncoders() {
+    swerveSubsystem.resetEncoders();
+  }
+  
 }

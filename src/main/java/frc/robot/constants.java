@@ -167,7 +167,7 @@ public class constants {
         //Configuracion los puertos para habilitar mobilidad
         public static final int kDriverYAxis = 1; //joystick Izquierdo en eje Y 
         public static final int kDriverXAxis = 0; //Joystick Izquierdo en eje X
-        public static final int kDriverRotAxis = 4; //Joystick Derecho en Eje X
+        public static final int kDriverZAxis = 4; //Joystick Derecho en Eje X
         public static final int kDriverAutoTargetButtonIdx = 3;
         public static final int kDriverFieldOrientedButtonIdx = 6; //Boton para orientacion de campo
 

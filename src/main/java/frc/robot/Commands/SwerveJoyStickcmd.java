@@ -10,6 +10,12 @@ import frc.robot.Subsystems.SwerveSubsystem;
 import frc.robot.constants.DriveConstants;
 import frc.robot.constants.OIConstants;
 
+/*
+ * @Author: Juan Felipe Zepeda del Toro
+ * @Author: Fernando Joel Cruz Briones
+ * Version 1.0
+ */
+
 public class SwerveJoyStickcmd extends Command {
 
     //Creamos los subsystemas que necesitamos
