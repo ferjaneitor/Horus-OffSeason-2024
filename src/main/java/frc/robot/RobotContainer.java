@@ -4,10 +4,21 @@
 
 package frc.robot;
 
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.Commands;
+import frc.robot.Subsystems.LimeLightSubsystem;
+import frc.robot.Subsystems.SwerveSubsystem;
+import frc.robot.constants.OIConstants;
 
 public class RobotContainer {
+
+  private final SwerveSubsystem swerveSubsystem = new SwerveSubsystem();
+  private final LimeLightSubsystem LimeLightSubsystem = new LimeLightSubsystem();
+
+  private final Joystick driverJoystick = new Joystick(OIConstants.kDriverControllerPort);
+  private final Joystick AddOnsJoystick = new Joystick(OIConstants.kAddOnsControllerPort);
+
   public RobotContainer() {
     configureBindings();
   }
