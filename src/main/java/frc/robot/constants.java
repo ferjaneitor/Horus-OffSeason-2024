@@ -53,10 +53,10 @@ public class constants {
         public static final double kTeleDriveMaxAngularAccelerationUnitsPerSecond = 3;//Aceleracion Maxima Angular
 
         // La distancia entre las llantas de la derecha y de la izquierda
-        public static final double kTrackWidth = Units.inchesToMeters(28.5); //(MODIFY)
+        public static final double kTrackWidth = Units.inchesToMeters(20.5); //(MODIFY)
 
         // La distancia entre las llantas delanteras y las traceras
-        public static final double kWheelBase = Units.inchesToMeters(28.5); //(MODIFY)
+        public static final double kWheelBase = Units.inchesToMeters(20.5); //(MODIFY)
 
         //Kinematicas
         public static final SwerveDriveKinematics kDriveKinematics = new SwerveDriveKinematics(

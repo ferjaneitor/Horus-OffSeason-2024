@@ -27,40 +27,40 @@ public class SwerveSubsystem extends SubsystemBase {
 
     //Creamos nuestros modulos Swerve
     private final SwerveModule frontLeft = new SwerveModule(
-        0,
-        0,
-        false,
-        false,
-        0,
-        0,
-        false);
+        DriveConstants.kFrontLeftDriveMotorPort,
+        DriveConstants.kFrontLeftSteeringMotorPort,
+        DriveConstants.kFrontLeftDriveEncoderReversed,
+        DriveConstants.kFrontLeftSteeringEncoderReversed,
+        DriveConstants.kFrontLeftDriveAbsoluteEncoderPort,
+        DriveConstants.kFrontLeftDriveAbsoluteEncoderOffsetRad,
+        DriveConstants.kFrontLeftDriveAbsoluteEncoderReversed);
 
     private final SwerveModule frontRight = new SwerveModule(
-        0,
-        0, 
-        false,
-        false,
-        0,
-        0,
-        false);
+        DriveConstants.kFrontRightDriveMotorPort,
+        DriveConstants.kFrontRightSteeringMotorPort, 
+        DriveConstants.kFrontRightDriveEncoderReversed,
+        DriveConstants.kFrontRightSteeringEncoderReversed,
+        DriveConstants.kFrontRightDriveAbsoluteEncoderPort,
+        DriveConstants.kFrontRightDriveAbsoluteEncoderOffsetRad,
+        DriveConstants.kFrontRightDriveAbsoluteEncoderReversed);
 
     private final SwerveModule backLeft = new SwerveModule(
-        0,
-        0, 
-        false, 
-        false,
-        0,
-        0,
-        false);
+        DriveConstants.kBackLeftDriveMotorPort,
+        DriveConstants.kBackLeftSteeringMotorPort, 
+        DriveConstants.kBackLeftDriveEncoderReversed, 
+        DriveConstants.kBackLeftSteeringEncoderReversed,
+        DriveConstants.kBackLeftDriveAbsoluteEncoderPort,
+        DriveConstants.kBackLeftDriveAbsoluteEncoderOffsetRad,
+        DriveConstants.kBackLeftDriveAbsoluteEncoderReversed);
 
     private final SwerveModule backRight = new SwerveModule(
-        0, 
-        0, 
-        false, 
-        false,
-        0,
-        0, 
-        false);
+        DriveConstants.kBackRightDriveMotorPort, 
+        DriveConstants.kBackRightSteeringMotorPort, 
+        DriveConstants.kBackRightDriveEncoderReversed, 
+        DriveConstants.kBackRightSteeringEncoderReversed,
+        DriveConstants.kBackRightDriveAbsoluteEncoderPort,
+        DriveConstants.kBackRightDriveAbsoluteEncoderOffsetRad, 
+        DriveConstants.kBackRightDriveAbsoluteEncoderReversed);
 
     //Sacamos La posicion de cada uno de los modulos 
     SwerveModulePosition[] modulePositions = {
